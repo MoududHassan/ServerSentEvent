@@ -1,6 +1,15 @@
 Quarkus RabbitMQ Server side event R&D
 ============================
 
+##Architecture
+In this guide, we are going to develop two applications communicating with a RabbitMQ broker. The first application sends a quote request to the RabbitMQ quote requests exchange and consumes messages from the quote queue. The second application receives the quote request and sends a quote back.
+
+[](https://ibb.co/BwbjY1P)
+
+The first application, the producer, will let the user request some quotes over an HTTP endpoint. For each quote request, a random identifier is generated and returned to the user, to put the quote request on pending. At the same time the generated request id is sent to the quote-requests exchange.
+
+
+
 ## Start the application in dev mode
 
 In a first terminal, run:
