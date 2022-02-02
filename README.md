@@ -2,9 +2,11 @@ Quarkus RabbitMQ Server side event R&D
 ============================
 
 ##Architecture
+
+[https://i.ibb.co/stnQXBP/amqp-qs-architecture.png](url)
+
 > In this guide, we are going to develop two applications communicating with a RabbitMQ broker. The first application sends a quote request to the RabbitMQ quote requests exchange and consumes messages from the quote queue. The second application receives the quote request and sends a quote back.
 
-[](https://i.ibb.co/stnQXBP/amqp-qs-architecture.png)
 
 > The first application, the producer, will let the user request some quotes over an HTTP endpoint. For each quote request, a random identifier is generated and returned to the user, to put the quote request on pending. At the same time the generated request id is sent to the quote-requests exchange.
 
