@@ -169,10 +169,11 @@ public Multi<Quote> stream() {
 
 > Returns the stream (Reactive Stream)
 
+## Run using ide in dev mode
+> quarkus dev
 
 
-
-## Start the application in dev mode
+## Start the application in dev mode using docker compose
 
 In a first terminal, run:
 
