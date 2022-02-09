@@ -10,7 +10,11 @@ Quarkus RabbitMQ Server side event R&D
 
 > The first application, the producer, will let the user request some quotes over an HTTP endpoint. For each quote request, a random identifier is generated and returned to the user, to put the quote request on pending. At the same time the generated request id is sent to the quote-requests exchange.
 
+>The second application, the processor, in turn, will read from the quote-requests queue put a random price to the quote, and send it to an exchange named quotes.
+Lastly, the producer will read the quotes and send them to the browser using server-sent events. The user will therefore see the quote price updated from pending to the received price in real-time.
 
+## The Quote object
+> The Quote class will be used in both producer and processor projects.
 
 ## Start the application in dev mode
 
